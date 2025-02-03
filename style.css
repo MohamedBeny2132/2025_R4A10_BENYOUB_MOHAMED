@@ -1,0 +1,62 @@
+
+
+header {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px 20px; 
+}
+  
+nav {
+    display: flex; 
+    gap: 20px; 
+}
+
+main {
+    margin-top: 20px; 
+    margin-bottom: 50px; 
+}
+
+#cartes {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+     
+}
+
+.label {
+    border: 1px solid black; 
+    height: 300px;    
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.representation {
+    border: 1px solid black; 
+    width: 100%;
+    height: 50%;
+    align-items: center; 
+}
+
+
+@media screen and (width < 1024px) {
+    #cartes  {
+      grid-template-columns: repeat(2, 0.9fr);
+    }
+  }
+
+@media screen and (width < 480px) {
+    #cartes  {
+      grid-template-columns: repeat(1, 0.8fr);
+    }
+  }
+  
+ 
+  
+
+  
+
+  
