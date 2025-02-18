@@ -1,0 +1,9 @@
+<div class="testimonial-card">
+    <h2 class="title">{{titre}}</h2>
+    <div class="feedbacks">
+    <app-carte [carte]="feedbacks[currentIndex]"></app-carte>
+    </div>
+</div>
+<app-switch (nextAvis)="changeSlide($event)" [currentIndex]="currentIndex" class="switch"></app-switch>
+
+  

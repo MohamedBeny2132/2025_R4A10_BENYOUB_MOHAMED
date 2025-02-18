@@ -1,0 +1,8 @@
+<div class="footer">
+    <h3>{{ columnData.title }}</h3>
+    <ul>
+        @for (link of columnData.links; track $index) {
+        <li><a [href]="link.href">{{ link.text }}</a></li>
+        }
+    </ul>
+</div>

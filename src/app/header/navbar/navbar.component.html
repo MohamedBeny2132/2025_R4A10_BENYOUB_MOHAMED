@@ -1,0 +1,7 @@
+<nav class="navbar">
+
+    @for (lien of menus; track $index) {
+    <a [href]="lien.href" class="nav-link">{{ lien.label }}</a>
+    }
+
+</nav>
