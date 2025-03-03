@@ -1,0 +1,14 @@
+<header>
+    <p>{{ NOM_SITE }}</p>
+  
+    <nav>
+        @for (lien of liens; track lien.url) {
+            <a [href]="lien.url">{{ lien.nom }}</a>
+        }  
+    </nav>
+    
+</header>
+
+
+
+  

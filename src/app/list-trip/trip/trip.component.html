@@ -1,0 +1,4 @@
+<a [routerLink]="['/trip', trip.id]"> Voyage ! {{ trip.id }} </a>
+<p>Destination: {{ trip.dest }}</p>
+<p>Description: {{ trip.desc | slice:0:20 }}</p>
+<p>Prix : {{ trip.price | currency:'EUR' }}</p>
