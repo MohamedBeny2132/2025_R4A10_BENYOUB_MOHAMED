@@ -1,0 +1,31 @@
+@import 'bootstrap/scss/bootstrap';
+.voyage-btn {
+    @extend .btn, .btn-primary; // Utilise les classes Bootstrap de base
+    font-weight: bold;
+    margin-bottom: 1rem; // Espacement en bas
+    transition: background-color 0.3s ease; // Animation au survol
+
+    &:hover {
+      background-color: darken($primary, 10%); // Assombrit la couleur au survol
+    }
+  }
+  
+  // Styles pour les éléments de la carte
+  .trip-card {
+    background-color: $light; // Utilise une variable Bootstrap pour la couleur de fond
+    border: 1px solid $border-color; // Bordure légère
+    border-radius: 0.5rem; // Coins arrondis
+    padding: 1.5rem; // Espacement interne
+    margin-bottom: 1.5rem; // Espacement en bas
+  
+    .card-text {
+      margin-bottom: 0.5rem; // Espacement entre les paragraphes
+      font-size: 1rem;
+  
+      // Style pour le prix
+      &.price {
+        font-weight: bold;
+        color: $success; // Utilise une variable Bootstrap pour la couleur du prix
+      }
+    }
+  }

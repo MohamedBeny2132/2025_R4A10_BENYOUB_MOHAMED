@@ -1,4 +1,6 @@
-<a [routerLink]="['/trip', trip.id]"> Voyage ! {{ trip.id }} </a>
-<p>Destination: {{ trip.dest }}</p>
-<p>Description: {{ trip.desc | slice:0:20 }}</p>
-<p>Prix : {{ trip.price | currency:'EUR' }}</p>
+<div class="trip-card">
+  <a [routerLink]="['/trip', trip.id]" class="voyage-btn">Voyage ! {{ trip.id }}</a>
+  <p class="card-text">Destination: {{ trip.dest }}</p>
+  <p class="card-text">Description: {{ trip.desc | slice:0:20 }}</p>
+  <p class="card-text price">Prix : {{ trip.price | currency:'EUR' }}</p>
+</div>

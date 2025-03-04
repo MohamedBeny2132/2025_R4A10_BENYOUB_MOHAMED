@@ -6,26 +6,27 @@ import { TripService } from '../trip.service';
   standalone: true,
   imports: [],
   templateUrl: './button-delete.component.html',
-  styleUrl: './button-delete.component.scss',
+  styleUrls: ['./button-delete.component.scss'],
 })
 export class ButtonDeleteComponent {
+  private _idTrip!: number;
   serviceTrip = inject(TripService);
-  id_trip! : number;
 
   @Input()
-    set trip(value: number) {
-      this.id_trip = value;
-    }
-  
-    get trip(): number {
-      return this.id_trip;
-    }
-  @Output() tripDeleted = new EventEmitter<number>(); 
+  set idTrip(value: number) {
+    this._idTrip = value;
+  }
+
+  get idTrip(): number {
+    return this._idTrip;
+  }
+
+  @Output() tripDeleted = new EventEmitter<number>();
 
   deleteTrip() {
     if (window.confirm('Êtes-vous sûr ?')) {
-      this.serviceTrip.removeTrip(this.id_trip);
-      this.tripDeleted.emit(this.id_trip);
+      this.serviceTrip.removeTrip(this.idTrip);
+      this.tripDeleted.emit(this.idTrip);
     }
   }
 }

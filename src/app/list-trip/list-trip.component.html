@@ -1,12 +1,13 @@
-<ul>
-
+<ul class="trip-grid">
     @for (trip of trips; track trip.id) {
-       <li> <app-trip [trip]="trip"></app-trip> </li>
+      <li class="trip-item">
+        <app-trip [trip]="trip"></app-trip>
+        <app-button-delete [idTrip]="trip.id" (tripDeleted)="actualise()"></app-button-delete>
+      </li>
     }
-
-</ul>
-
-<div>
+  </ul>
+  
+  <div class="pagination">
     <button (click)="previousPage()" [disabled]="currentPage === 1">Précédent</button>
     <span>Page {{ currentPage }} sur {{ nbPageMax() }}</span>
     <button (click)="nextPage()" [disabled]="currentPage === nbPageMax()">Suivant</button>

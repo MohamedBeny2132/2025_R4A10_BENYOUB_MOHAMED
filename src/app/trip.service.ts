@@ -57,7 +57,11 @@ export class TripService {
   }
 
   removeTrip(id: number): void {
+    console.log(id);
+    
     this.trips = this.trips.filter((trip) => trip.id !== id);
+    console.log(this.trips.length);
+
   }
 
 

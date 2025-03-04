@@ -19,10 +19,7 @@ export class PageDetailComponent implements OnInit {
 
   deleteTrip()
   {
-    if (window.confirm('Etes vous sur ?')){
-      this.serviceTrip.removeTrip(this.trip.id);
-      this.router.navigate(['/home']);
-    }
+    this.router.navigate(['/home']);
   }
   
   ngOnInit(): void {

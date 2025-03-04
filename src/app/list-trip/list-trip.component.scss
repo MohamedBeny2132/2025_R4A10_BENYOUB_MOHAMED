@@ -1,0 +1,57 @@
+@import 'bootstrap/scss/bootstrap';
+.trip-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); // 4 colonnes
+    grid-template-rows: repeat(5, auto); // 5 lignes
+    gap: 1.5rem; // Espacement entre les cartes
+    padding: 0;
+    list-style: none; // Supprime les puces de la liste
+  
+    .trip-item {
+      background-color: white;
+      border: 1px solid #dee2e6; // Bordure légère
+      border-radius: 0.5rem; // Coins arrondis
+      padding: 1rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Ombre légère
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+  
+      &:hover {
+        transform: translateY(-5px); // Effet de levée au survol
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Ombre plus prononcée
+      }
+    }
+  }
+  
+  // Styles pour la pagination
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 1rem;
+  
+    button {
+      padding: 0.5rem 1rem;
+      border: 1px solid #007bff; // Bordure bleue
+      border-radius: 0.25rem;
+      background-color: #007bff; // Fond bleu
+      color: white; // Texte blanc
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  
+      &:hover {
+        background-color: darken(#007bff, 10%); // Assombrit le bouton au survol
+      }
+  
+      &:disabled {
+        background-color: #6c757d; // Couleur grise pour le bouton désactivé
+        border-color: #6c757d;
+        cursor: not-allowed;
+      }
+    }
+  
+    span {
+      font-size: 1rem;
+      color: #333;
+    }
+  }

@@ -1,10 +1,11 @@
 import { Component, inject } from '@angular/core';
 import { Trip, TripService } from '../trip.service';
 import { TripComponent } from './trip/trip.component';
+import { ButtonDeleteComponent } from '../button-delete/button-delete.component';
 
 @Component({
   selector: 'app-list-trip',
-  imports: [TripComponent], 
+  imports: [TripComponent,ButtonDeleteComponent], 
   templateUrl: './list-trip.component.html',
   styleUrl: './list-trip.component.scss',
 })
@@ -30,5 +31,11 @@ export class ListTripComponent {
 
   nbPageMax(): number {
     return this.serviceTrip.nbPageMax();
+  }
+
+  actualise(){
+    this.trips = this.serviceTrip.getTrips(this.currentPage);
+    console.log("hey");
+    
   }
 }

@@ -1,0 +1,23 @@
+// Styles pour le conteneur principal
+footer {
+  background-color: #34495e; // Couleur de fond sombre
+  padding: 1.5rem; // Espacement interne
+  text-align: center; // Centrer le contenu
+  color: #ecf0f1; // Couleur du texte clair
+  font-family: Arial, sans-serif; // Police de caractères
+
+  // Styles pour le nom du site
+  p {
+    margin: 0; // Supprime la marge par défaut
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem; // Espacement en bas
+  }
+
+  // Styles pour le composant de copyright
+  app-copyright {
+    display: block; // Assure que le composant est un bloc
+    font-size: 0.875rem;
+    color: #bdc3c7; // Couleur du texte plus claire
+  }
+}
